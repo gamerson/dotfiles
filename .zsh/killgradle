@@ -1,0 +1,2 @@
+jps | grep GradleDaemon | cut -d' ' -f1 | xargs kill
+jps | grep GradleWorker | cut -d' ' -f1 | xargs kill

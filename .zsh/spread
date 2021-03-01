@@ -1,0 +1,7 @@
+ticket=$1
+for i in ${@:2}
+do
+gw $i:install $i:updateFileVersions
+git commit -am "$1 Use latest $i"
+gw $i:installCache
+done

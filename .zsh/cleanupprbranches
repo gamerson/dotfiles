@@ -1,0 +1,12 @@
+for i in `git branch -r | grep -v master | cut -d'/' -f2`
+do
+if git branch -d $i; then
+	git push origin :$i
+else
+	if git branch -d -r $i; then
+		git push origin :$i
+	else
+		echo "Failed to delete $i"
+	fi
+fi
+done

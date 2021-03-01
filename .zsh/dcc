@@ -1,0 +1,4 @@
+for i in $(docker container ls -a | awk '{print $1}' | grep -v "CONTAINER")
+do
+docker container rm $i
+done

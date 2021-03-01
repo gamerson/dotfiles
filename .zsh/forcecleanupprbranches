@@ -1,0 +1,4 @@
+for i in `git branch | grep pr | cut -d'/' -f2`
+do
+git branch -D $i
+done

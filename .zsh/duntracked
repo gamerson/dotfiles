@@ -1,0 +1,1 @@
+git status -s | grep "??" | sed -e "s/?? //" | xargs -I{} rm -rf "{}"

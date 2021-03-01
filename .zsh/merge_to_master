@@ -1,0 +1,3 @@
+branchname=`git rev-parse --abbrev-ref HEAD`
+git checkout master
+git merge --no-ff -m "Merge ${branchname}" $branchname

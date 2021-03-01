@@ -1,0 +1,1 @@
+java -jar ~/my\ repos/liferay-blade-cli/cli/build/libs/blade.jar $@

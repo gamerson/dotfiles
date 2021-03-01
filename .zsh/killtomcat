@@ -1,0 +1,1 @@
+kill -9 `jps | grep Bootstrap | cut -d' ' -f1`

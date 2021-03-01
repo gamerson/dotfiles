@@ -1,0 +1,7 @@
+gh pr $1
+git checkout master
+git merge --no-ff -m"Merge pull request #$1 from gamerson/pr-$1" pr-$1
+git push origin master
+git push upstream master
+git branch -d pr-$1
+git push origin :pr-$1

@@ -1,0 +1,11 @@
+gh pr $1 &&
+git rebase master &&
+PR=`gh pr -s gamerson | grep "\-\-number" | sed -e 's/.*--number \(.*\).*$/\1/'` &&
+gh pr $PR &&
+git checkout master &&
+git merge --no-ff -m"Merge pull request #$PR from gamerson/pr-$PR" pr-$PR &&
+git push origin master &&
+git push upstream master &&
+git branch -d pr-$1 &&
+git branch -d pr-$PR &&
+git push origin :pr-$1

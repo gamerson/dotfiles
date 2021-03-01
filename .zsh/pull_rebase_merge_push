@@ -1,0 +1,7 @@
+gh pr $1 && \
+git rebase master && \
+git checkout master && \
+git merge --no-ff pr-$1 -m"Merged branch pr-$1" && \
+git push origin master && \
+git push upstream master && \
+gh pr $1 -C -c "Merged in `git show | head -1 | cut -d' ' -f2`. Thanks!"

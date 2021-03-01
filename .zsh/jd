@@ -1,0 +1,4 @@
+#!/bin/bash
+suspend=$1
+shift
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=${suspend},address=5000 -jar "$@"

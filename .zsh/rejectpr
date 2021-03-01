@@ -1,0 +1,3 @@
+gh pr $1 -C -c "Please resend, thanks!"
+git checkout master
+git branch -D pr-$1

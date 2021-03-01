@@ -1,0 +1,1 @@
+curl -s https://search.maven.org/solrsearch/select\?q\=a:%22${1}%22\&rows\=1 | sed -E 's/.*latestVersion":"([0-9\.]+)",.*/\1/'

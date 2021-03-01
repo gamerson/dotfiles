@@ -1,0 +1,1 @@
+mvn archetype:generate -B -DgroupId=test -DartifactId=$1 -Dpackage=com.test  -DarchetypeArtifactId=com.liferay.project.templates.$2 -DarchetypeGroupId=com.liferay -Dauthor=Greg -DarchetypeVersion=$3 -DclassName=Foo -Dversion=1.0.0 $4
